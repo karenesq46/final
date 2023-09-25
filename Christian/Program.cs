@@ -206,7 +206,8 @@ namespace MIPROYECTOSCHARP{
         }
 
         static void Main(string[] args){
-            Guerrero personaje1 = new Guerrero("Christian", 20, 10, 4, 100, 4);
+	//modificacion del objeto guerrero 
+            Guerrero personaje1_modificado = new Guerrero("Christian", 20, 10, 4, 100, 4);
             Mago personaje2 = new Mago("Emmanuel", 5, 15, 4, 100, 3);
 
             personaje1.Atributos();
