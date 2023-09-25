@@ -12,6 +12,9 @@ public class myClass {
         Camioneta.Frenar();
         Camioneta.Informacion();
         Carro2.Frenar();
+        Carro1.frenarAuto();
+        Carro1.Informacion();
+        Carro2.frenarAuto();
         Carro2.Informacion();
 
     }

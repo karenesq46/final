@@ -18,7 +18,7 @@ abstract class Vehiculo {
         System.out.println("\nEl Vehiculo " + this.modelo + " esta acelerando.");
     }
 
-    public abstract void Frenar();
+    public abstract void frenarAuto();
     
     public String getMarca(){
         return this.marca;
