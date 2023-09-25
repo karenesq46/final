@@ -1,5 +1,5 @@
 class hothatch extends Vehiculo {
-    final int velocidad = 200;
+    final int velocidadActual = 200;
 
     public hothatch(String marca, String modelo, String color) {
         this.setMarca(marca);
@@ -10,7 +10,7 @@ class hothatch extends Vehiculo {
     public hothatch() {
         this.setSegmento("Deportivo");
         
-        System.out.println("Su velocidad maxima es: "+ this.velocidad + "KM/H");
+        System.out.println("Su velocidad maxima es: "+ this.velocidadActual + "KM/H");
     }
 
 
