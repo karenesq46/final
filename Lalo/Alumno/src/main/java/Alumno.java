@@ -2,6 +2,7 @@ public class Alumno {
     private String nombre;
     private int edad;
     private String correo;
+    private String escuela;
 
     public Alumno(String nombre, int edad, String correo){
         this.nombre=nombre;
