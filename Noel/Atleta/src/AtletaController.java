@@ -24,14 +24,14 @@ public class AtletaController {
     public void getAtletaGanador(){
         float time_a = atletas.get(0).getTiempo_carrera();
         float time_b = 0;
-        int indice = 0;
+        int index = 0;
         for (int i = 0; i < atletas.size(); i++) {
             time_b = atletas.get(i).getTiempo_carrera();
             if (time_b<time_a){
                 time_a=time_b;
-                indice = i;
+                index = i;
             }
         }
-        System.out.println("El atleta ganador es:\n"+atletas.get(indice).getDatosAtleta());
+        System.out.println("El atleta ganador es:\n"+atletas.get(index).getDatosAtleta());
     }
 }
