@@ -9,4 +9,32 @@ Esta es una practica utilizando git y Github
 git clone <link_repositorio>
 ```
 
-- 
+- Ver es estatus de cambios hechos:
+
+```
+git status
+```
+
+- Configurar a nivel global un usuario de git:
+
+```
+git config --global user.name noelsilis
+```
+
+- Configurar a nivel global un email de usuario en git:
+
+```
+git config --global user.email noel.maye@corvusdata.org
+```
+
+- Configurar a nivel de repositorio o proyecto un usuario de git:
+
+```
+git config user.name noelsilis
+```
+
+- Configurar a nivel de repositorio o proyecto un email de usuario en git:
+
+```
+git config user.email noel.maye@corvusdata.org
+```
