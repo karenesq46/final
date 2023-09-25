@@ -4,7 +4,7 @@ public class AtletaController {
     private ArrayList<Atleta> atletas;
     public AtletaController(){}
 
-    public void capturarAtletas(int n_atletas){
+    public void setAtletas(int n_atletas){
         atletas = new ArrayList<Atleta>();
         for (int i = 0; i < n_atletas; i++) {
             Scanner scanner = new Scanner(System.in);
