@@ -1,5 +1,5 @@
 class hothatch extends Vehiculo {
-    final int velocidadActual = 200;
+    final int velocidad_Actual = 200;
 
     public hothatch(String marca, String modelo, String color) {
         this.setMarca(marca);
