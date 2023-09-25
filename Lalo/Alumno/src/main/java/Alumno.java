@@ -18,4 +18,7 @@ public class Alumno {
     public int getEdad (){
         return this.edad;
     }
+    public String toString(){
+	return this.name + " tiene " + this.edad + " a;os";
+    }
 }
