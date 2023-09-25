@@ -4,7 +4,8 @@ using System;
 namespace MIPROYECTOSCHARP{
 
     class Personaje{
-        private string nombre;
+	//segundo commit modificacion de la variable nombre a nombre_modificado
+        private string nombre_modificado;
         private int fuerza;
         private int inteligencia;
         private int defensa;
