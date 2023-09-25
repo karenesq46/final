@@ -9,12 +9,9 @@ public class myClass {
         Carro2.setColor("Gris Oxford");
 
         Carro2.Acelerar();
-        Camioneta.Frenar();
-        Camioneta.Informacion();
-        Carro2.Frenar();
-        Carro1.frenarAuto();
+        Carro1.Frenar();
         Carro1.Informacion();
-        Carro2.frenarAuto();
+        Carro2.Frenar();
         Carro2.Informacion();
 
     }

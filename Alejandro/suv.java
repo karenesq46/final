@@ -12,7 +12,7 @@ class suv extends Vehiculo{
         System.out.println("\nEl vehiculo " + this.getMarca() + " " + this.getModelo() + " esta acelerando a fondo.");
     }
 
-    public void frenarAuto(){
+    public void frenar_Auto(){
         System.out.println("\nEl vehiculo " + this.getMarca() + " " + this.getModelo() + " frena muy lentamente.");
     }
 

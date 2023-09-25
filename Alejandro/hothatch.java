@@ -15,7 +15,7 @@ class hothatch extends Vehiculo {
 
 
     
-    public void frenarAuto(){
+    public void frenar_Auto(){
         System.out.println("\nEl vehiculo " + this.getModelo()+ " frena contundentemente.");
     }
 
