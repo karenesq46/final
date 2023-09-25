@@ -9,7 +9,8 @@ namespace MIPROYECTOSCHARP{
         private int inteligencia;
         private int defensa;
         private int vida;
-
+	
+	//cambio del metodo constructor Personaje a Modificacion del personaje
         public Personaje(string nombre, int fuerza, int inteligencia, int defensa, int vida){
             this.nombre = nombre;
             this.fuerza = fuerza;
