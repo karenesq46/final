@@ -128,4 +128,12 @@ git log -graph
 ```
 git config  rebase.auto true                                 
 ```
+- Ver etiquetas existentes
+```
+git tag
+```
+Elimina un archivo del repositorio y del sistema
+```
+git rm <nombreDeArchivo> 
+```
 
