@@ -42,3 +42,63 @@ git config user.name noelsilis
 ```
 git config user.email noel.maye@corvusdata.org
 ```
+
+- Crea un nuevo repositorio local con el nombre especificado:
+
+```
+git init <nombre del proyecto>
+```
+
+- Toma una instantanea del archivo para preparar la version:
+
+```
+git add .
+```
+
+- Registra las instantaneas del archivo permanete en el historial de version:
+
+```
+git commit -m <mensaje>
+```
+
+- Enumera todas las ramas en el repositorio actual:
+
+```
+git branch
+```
+
+- Crea una nueva rama:
+
+```
+git branch <nombre de la rama>
+```
+
+- Descarga el historial del marcador e incorpora cambios:
+
+```
+git pull
+```
+
+- Carga todos los commits de la rama local a github:
+
+```
+git push
+```
+
+- Crea una nueva rama:
+
+```
+git checkout -b <nombre de la rama>
+```
+
+- Cambia a la rama especificada y actualiza el directorio activo:
+
+```
+git checkout <nombre de la rama>
+```
+
+- Combina el historial de la rama especificada con la rama actual:
+
+```
+git merge <nombre de la rama a combinar>
+```
