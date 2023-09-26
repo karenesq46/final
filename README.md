@@ -61,6 +61,12 @@ git add .
 git commit -m <mensaje>
 ```
 
+- Modifica el mensaje del ultimo commit:
+
+```
+git commit --amend -m <mensaje>
+```
+
 - Enumera todas las ramas en el repositorio actual:
 
 ```
@@ -85,6 +91,11 @@ git pull
 git push
 ```
 
+- Descarga el historial del marcador sin hacer cambios:
+```
+git fetch <Nombre de la rama remota> <Nombre de la rama local>
+```
+
 - Crea una nueva rama:
 
 ```
@@ -102,3 +113,19 @@ git checkout <nombre de la rama>
 ```
 git merge <nombre de la rama a combinar>
 ```
+
+- Muestra el historico de revisiones:
+```
+git log
+```
+
+- Muestra graficamente las ramas:
+```
+git log -graph
+```
+
+- Configurar nuestro commit como actual, antes de hacer pull y descargar los cambios:
+```
+git config  rebase.auto true                                 
+```
+
