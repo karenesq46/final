@@ -1,4 +1,4 @@
-class suv extends Vehiculo{
+class suv extends Vehiculo {
 
     public suv(String marca, String modelo, String color){
         this.setMarca(marca);
