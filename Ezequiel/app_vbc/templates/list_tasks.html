@@ -1,0 +1,111 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<body>
+  <div class="container-scroller">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="{% static 'crud_vbc/images/logo.svg'%}" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{% static 'crud_vbc/images/logo-mini.svg'%}" alt="logo" /></a>
+      </div>
+      <ul class="nav">
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row ">
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  {% if object_list %} <!--Se usa el objeto, ya  no el metodo-->
+    <!-- Agregar -->
+                    <h4 class="card-title">Crear Perfil</h4>
+                    <form action="{% url 'insert' %}" method="POST" class="forms-sample" enctype="multipart/form-data">
+                     {% csrf_token %}
+                       <div class="form-group">
+                         <label for="nombre" class="form-label">Nombre</label>
+                         <input type="text"name="nombre" class="form-control" id="nombre" placeholder="Nombre" required pattern="[a-zA-Z]+">
+                       </div>
+                       <div class="form-group">
+                         <label for="apellido">Apellidos</label>
+                         <input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido" required pattern="[a-zA-Z]+">
+                       </div>
+                       <div class="form-group">
+                         <label for="edad" class="form-label">Edad</label>
+                         <input type="text"value="{{update.nombre}}" name="edad" class="form-control" id="edad" placeholder="Nombre" required="" pattern="[0-9]+">
+                       </div>
+                       <div class="form-group">
+                         <label for="foto">Foto de perfil</label>
+                         <input name="foto" type="file" accept="image/*" class="form-control" id="foto">
+                       </div>
+                      <button type="submit" class="btn btn-primary mr-2">Crear Perfil</button>
+                    </form>
+                   </form>
+                   {%else %}
+   <!--Editar-->
+                   <h4 class="card-title">Editar Perfil</h4> 
+                   <form action="" method="POST" class="forms-sample" enctype="multipart/form-data">
+                    {% csrf_token %} 
+                    <div class="form-group">
+                      <label for="apellido">Editar nombre</label>
+                      {{form.nombre}}
+                    </div>
+                      <div class="form-group">
+                        <label for="apellido">Editar apellidos</label>
+                        {{form.apellido}}
+                      </div>
+                      <div class="form-group">
+                        <label for="edad" class="form-label">Editar edad</label>
+                        {{form.edad}}
+                      </div>
+                      <div class="form-group">
+                        <label for="foto">Editar foto de perfil</label>
+                        <input name="foto" type="file" accept="image/*" class="form-control" id="foto">
+                      </div>
+                     <button type="submit" class="btn btn-primary ">Actualizar</button>
+                     <a class="btn btn-danger" href="{% url 'list_tasks' %}">Cancelar</a>
+                   {%endif%}
+                </div>
+              </div>
+             </div>
+              <!--Enlista-->
+              <div class="col-7 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Datos Perfil</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                  </div>
+                  </div>
+                 </div>
+              </div>
+          </div>
+        </div>
+     </div>
+   </div>
+ </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{% static 'assets/vendors/chart.js/Chart.min.js'%}"></script>
+  <script src="{% static 'assets/vendors/progressbar.js/progressbar.min.js'%}"></script>
+  <script src="{% static 'assets/vendors/jvectormap/jquery-jvectormap.min.js'%}"></script>
+  <script src="{% static 'assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js'%}"></script>
+  <script src="{% static 'assets/vendors/owl-carousel-2/owl.carousel.min.js'%}"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{% static 'assets/js/off-canvas.js'%}"></script>
+  <script src="{% static 'assets/js/hoverable-collapse.js'%}"></script>
+  <script src="{% static 'assets/js/misc.js'%}"></script>
+  <script src="{% static 'assets/js/settings.js'%}"></script>
+  <script src="{% static 'assets/js/todolist.js'%}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page -->
+  <script src="{% static 'assets/js/dashboard.js'%}"></script>
+  <!-- End custom js for this page -->
+</body>
+{% include 'menu.html'%}
+{% endblock %}
