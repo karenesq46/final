@@ -4,7 +4,7 @@ from .models import Profile
 from django.urls import reverse_lazy
 from .forms import ProfileForm
 
-class Inicio(TemplateView):#esta clase muestra
+class Index(TemplateView):#esta clase muestra
     template_name = 'home.html'
 
 class List (ListView):
