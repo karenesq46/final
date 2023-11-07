@@ -11,7 +11,7 @@ class List (ListView):
       model = Profile
       template_name = 'list_tasks.html'
 
-#def formulario(request):
+#def Formulario(request):
 #      form = ProfileForm()
 #      if form.is_valid():
 #         form.save()
