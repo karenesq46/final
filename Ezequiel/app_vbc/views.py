@@ -10,12 +10,14 @@ class Index(TemplateView):#esta clase muestra
 class List (ListView):
       model = Profile
       template_name = 'list_tasks.html'
+
 #def formulario(request):
 #      form = ProfileForm()
 #      if form.is_valid():
 #         form.save()
 #         form = ProfileForm()
 #      return render(request, 'list_tasks.html',{'form':form})
+
 class Insert (CreateView):
       model = Profile
       form_class = ProfileForm
