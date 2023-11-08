@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main id="main" class="main">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Edad</td>
+                <td>Creacion</td>
+                <td>Modificacion</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {%if object_list %}
+            {%for profile in object_list%}
+            <tr>
+                <td>{{profile.id}}</td>
+                <td>
+                    <img src="{{evidencia.foto.url}}" alt="image" />
+                    {{profile.nombre}}
+                </td>
+                <td>{{profile.apellido}}</td>
+                <td>{{profile.edad}}</td>
+                <td>{{profile.created_at}}</td>
+                <td>{{profile.updated_at}}</td>
+                <td><a class="btn btn-primary" href="{% url 'editar_usuario' profile.id %}"> Editar</a></td>
+                <td><a class="btn btn-danger" href="{% url 'eliminar_usuario' profile.id %}"> Eliminar</a></td>
+
+             </tr>
+            {%endfor%}
+            {%else%}
+            <h4>No hay registros</h4>
+            {%endif%}
+        </tbody>
+    </table>
+</main>
+
+{% endblock %}

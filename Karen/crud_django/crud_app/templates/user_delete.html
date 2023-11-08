@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main id="main" class="main">
+
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Crear usuario</h4>
+          <form method="post">
+            {% csrf_token %}
+            <h3>¿Deseas eliminar el registro {{object.nombre}}?</h3>
+            <button class="btn btn-danger" type="submit">Eliminar</button>
+            <a class="btn btn-default" href="{%url 'listar_usuario' %}">Cancelar</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
