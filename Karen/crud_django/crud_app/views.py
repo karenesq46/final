@@ -12,10 +12,12 @@ def user_view(request):
         form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
+            # Modificacion del metodo user_view
         return redirect('crear_usuario')
     else:
-        form=UserProfileForm()
-    return render(request, 'user_form.html', {'form':form})
+        form = UserProfileForm()
+    return render(request, 'user_form.html', {'form': form})
+
 
 def user_list(request):
     profile=UserProfile.objects.all().order_by('id')
