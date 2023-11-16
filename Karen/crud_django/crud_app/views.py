@@ -18,22 +18,23 @@ def user_view(request):
         form = UserProfileForm()
     return render(request, 'user_form.html', {'form': form})
 
-
 def user_list(request):
-    profile=UserProfile.objects.all().order_by('id')
-    contexto={'profiles':profile}
+    profiles = UserProfile.objects.all().order_by('id')  # Modificacion del nombre de la variable
+    contexto = {'profiles': profiles}
     return render(request, 'user_list.html', contexto)
 
 def user_edit(request, id_profile):
-    profile=UserProfile.objects.get(id=id_profile)
+    profile = UserProfile.objects.get(id=id_profile)
     if request.method == "GET":
         form = UserProfileForm(instance=profile)
     else:
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
+            # Modificacion del nombre del objeto profile
         return redirect('listar_usuario')
     return render(request, 'user_form.html', {'form': form})
+
 
 def user_delete(request, id_profile):
     profile=UserProfile.objects.get(id=id_profile)
